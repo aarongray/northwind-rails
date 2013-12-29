@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  employee_id: 1
+  order_date: 2013-12-29
+  required_date: 2013-12-29
+  shipped_date: 2013-12-29
+  shipped_via: 1
+  freight: 1.5
+  ship_name: MyString
+  ship_address: MyString
+  ship_city: MyString
+  ship_region: MyString
+  ship_postal_code: MyString
+  ship_country: MyString
+
+two:
+  customer_id: 1
+  employee_id: 1
+  order_date: 2013-12-29
+  required_date: 2013-12-29
+  shipped_date: 2013-12-29
+  shipped_via: 1
+  freight: 1.5
+  ship_name: MyString
+  ship_address: MyString
+  ship_city: MyString
+  ship_region: MyString
+  ship_postal_code: MyString
+  ship_country: MyString
