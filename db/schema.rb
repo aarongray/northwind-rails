@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229194415) do
+ActiveRecord::Schema.define(version: 20131229205446) do
 
   create_table "categories", force: true do |t|
     t.string   "category_name"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20131229194415) do
     t.date     "order_date"
     t.date     "required_date"
     t.date     "shipped_date"
-    t.integer  "shipped_via"
+    t.integer  "ship_via"
     t.float    "freight"
     t.string   "ship_name"
     t.string   "ship_address"
