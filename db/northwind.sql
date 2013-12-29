@@ -13,18 +13,18 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
-  `category_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `category_name` varchar(15) default NULL,
   `description` text,
   `picture` varchar(40) default NULL,
-  PRIMARY KEY  (`category_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`category_id`, `category_name`, `description`, `picture`) VALUES
+INSERT INTO `categories` (`id`, `category_name`, `description`, `picture`) VALUES
 (1, 'Beverages', 'Soft drinks, coffees, teas, beers, and ales', NULL),
 (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings', ''),
 (3, 'Confections', 'Desserts, candies, and sweet breads', ''),
@@ -41,7 +41,7 @@ INSERT INTO `categories` (`category_id`, `category_name`, `description`, `pictur
 --
 
 CREATE TABLE IF NOT EXISTS `customers` (
-  `customer_id` varchar(5) NOT NULL default '',
+  `id` varchar(5) NOT NULL default '',
   `company_name` varchar(40) default NULL,
   `contact_name` varchar(30) default NULL,
   `contact_title` varchar(30) default NULL,
@@ -52,14 +52,14 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `country` varchar(15) default NULL,
   `phone` varchar(24) default NULL,
   `fax` varchar(24) default NULL,
-  PRIMARY KEY  (`customer_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`customer_id`, `company_name`, `contact_name`, `contact_title`, `address`, `city`, `region`, `postal_code`, `country`, `phone`, `fax`) VALUES
+INSERT INTO `customers` (`id`, `company_name`, `contact_name`, `contact_title`, `address`, `city`, `region`, `postal_code`, `country`, `phone`, `fax`) VALUES
 ('ALFKI', 'Alfreds Futterkiste', 'Maria Anders', 'Sales Representative', 'Obere Str. 57', 'Berlin', '', '12209', 'Germany', '030-0074321', '030-0076545'),
 ('ANATR', 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Owner', 'Avda. de la Constituci?n 2222', 'M?xico D.F.', '', '05021', 'Mexico', '(5) 555-4729', '(5) 555-3745'),
 ('ANTON', 'Antonio Moreno Taquer?a', 'Antonio Moreno', 'Owner', 'Mataderos  2312', 'M?xico D.F.', '', '05023', 'Mexico', '(5) 555-3932', ''),
@@ -159,7 +159,7 @@ INSERT INTO `customers` (`customer_id`, `company_name`, `contact_name`, `contact
 --
 
 CREATE TABLE IF NOT EXISTS `employees` (
-  `employee_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `last_name` varchar(20) default NULL,
   `first_name` varchar(10) default NULL,
   `title` varchar(30) default NULL,
@@ -176,14 +176,14 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `photo` varchar(40) default NULL,
   `notes` text,
   `reports_to` int(11) default NULL,
-  PRIMARY KEY  (`employee_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`employee_id`, `last_name`, `first_name`, `title`, `title_of_courtesy`, `birth_date`, `hire_date`, `address`, `city`, `region`, `postal_code`, `country`, `home_phone`, `extension`, `photo`, `notes`, `reports_to`) VALUES
+INSERT INTO `employees` (`id`, `last_name`, `first_name`, `title`, `title_of_courtesy`, `birth_date`, `hire_date`, `address`, `city`, `region`, `postal_code`, `country`, `home_phone`, `extension`, `photo`, `notes`, `reports_to`) VALUES
 (1, 'Davolio', 'Nancy', 'Sales Representative', 'Ms.', '1968-12-08', '1992-05-01', '507 - 20th Ave. E.\r\nApt. 2A', 'Seattle', 'WA', '98122', 'United States', '(206) 555-9857', '5467', '', 'Education includes a BA in psychology from Colorado State University.  She also completed "The Art of the Cold Call."  Nancy is a member of Toastmasters International.', 2),
 (2, 'Fuller', 'Andrew', 'Vice President, Sales', 'Dr.', '1952-02-19', '1992-08-14', '908 W. Capital Way', 'Tacoma', 'WA', '98401', 'United States', '(206) 555-9482', '3457', '', 'Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas.  He is fluent in French and Italian and reads German.  He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales.  Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.', 0),
 (3, 'Leverling', 'Janet', 'Sales Representative', 'Ms.', '1963-08-30', '1992-04-01', '722 Moss Bay Blvd.', 'Kirkland', 'WA', '98033', 'United States', '(206) 555-3412', '3355', '', 'Janet has a BS degree in chemistry from Boston College).  She has also completed a certificate program in food retailing management.  Janet was hired as a sales associate and was promoted to sales representative.', 2),
@@ -201,7 +201,7 @@ INSERT INTO `employees` (`employee_id`, `last_name`, `first_name`, `title`, `tit
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
-  `order_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `customer_id` varchar(5) default NULL,
   `employee_id` int(11) default NULL,
   `order_date` date default NULL,
@@ -215,14 +215,14 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `ship_region` varchar(15) default NULL,
   `ship_postal_code` varchar(10) default NULL,
   `ship_country` varchar(15) default NULL,
-  PRIMARY KEY  (`order_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11078 ;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
+INSERT INTO `orders` (`id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
 (10248, 'VINET', 5, '1996-07-04', '1996-08-01', '1996-07-16', 3, 0, 'Vins et alcools Chevalier', '59 rue de l''Abbaye', 'Reims', '', '51100', 'France'),
 (10249, 'TOMSP', 6, '1996-07-05', '1996-08-16', '1996-07-10', 1, 0, 'Toms Spezialit?ten', 'Luisenstr. 48', 'M?nster', '', '44087', 'Germany'),
 (10250, 'HANAR', 4, '1996-07-08', '1996-08-05', '1996-07-12', 2, 0, 'Hanari Carnes', 'Rua do Pa?o, 67', 'Rio de Janeiro', 'RJ', '05454-876', 'Brazil'),
@@ -558,7 +558,7 @@ INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `r
 (10580, 'OTTIK', 4, '1997-06-26', '1997-07-24', '1997-07-01', 3, 0, 'Ottilies K?seladen', 'Mehrheimerstr. 369', 'K?ln', '', '50739', 'Germany'),
 (10581, 'FAMIA', 3, '1997-06-26', '1997-07-24', '1997-07-02', 1, 0, 'Familia Arquibaldo', 'Rua Or?s, 92', 'S?o Paulo', 'SP', '05442-030', 'Brazil'),
 (10582, 'BLAUS', 3, '1997-06-27', '1997-07-25', '1997-07-14', 2, 0, 'Blauer See Delikatessen', 'Forsterstr. 57', 'Mannheim', '', '68306', 'Germany');
-INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
+INSERT INTO `orders` (`id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
 (10583, 'WARTH', 2, '1997-06-30', '1997-07-28', '1997-07-04', 2, 0, 'Wartian Herkku', 'Torikatu 38', 'Oulu', '', '90110', 'Finland'),
 (10584, 'BLONP', 4, '1997-06-30', '1997-07-28', '1997-07-04', 1, 0, 'Blondel p?re et fils', '24, place Kl?ber', 'Strasbourg', '', '67000', 'France'),
 (10585, 'WELLI', 7, '1997-07-01', '1997-07-29', '1997-07-10', 1, 0, 'Wellington Importadora', 'Rua do Mercado, 12', 'Resende', 'SP', '08737-363', 'Brazil'),
@@ -895,7 +895,7 @@ INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `r
 (10916, 'RANCH', 1, '1998-02-27', '1998-03-27', '1998-03-09', 2, 0, 'Rancho grande', 'Av. del Libertador 900', 'Buenos Aires', '', '1010', 'Argentina'),
 (10917, 'ROMEY', 4, '1998-03-02', '1998-03-30', '1998-03-11', 2, 0, 'Romero y tomillo', 'Gran V?a, 1', 'Madrid', '', '28001', 'Spain'),
 (10918, 'BOTTM', 3, '1998-03-02', '1998-03-30', '1998-03-11', 3, 0, 'Bottom-Dollar Markets', '23 Tsawassen Blvd.', 'Tsawassen', 'BC', 'T2F 8M4', 'Canada');
-INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
+INSERT INTO `orders` (`id`, `customer_id`, `employee_id`, `order_date`, `required_date`, `shipped_date`, `ship_via`, `freight`, `ship_name`, `ship_address`, `ship_city`, `ship_region`, `ship_postal_code`, `ship_country`) VALUES
 (10919, 'LINOD', 2, '1998-03-02', '1998-03-30', '1998-03-04', 2, 0, 'LINO-Delicateses', 'Ave. 5 de Mayo Porlamar', 'I. de Margarita', 'Nueva Esparta', '4980', 'Venezuela'),
 (10920, 'AROUT', 4, '1998-03-03', '1998-03-31', '1998-03-09', 2, 0, 'Around the Horn', 'Brook Farm\r\nStratford St. Mary', 'Colchester', 'Essex', 'CO7 6JX', 'United Kingdom'),
 (10921, 'VAFFE', 1, '1998-03-03', '1998-04-14', '1998-03-09', 1, 0, 'Vaffeljernet', 'Smagsl?get 45', '?rhus', '', '8200', 'Denmark'),
@@ -1063,20 +1063,20 @@ INSERT INTO `orders` (`order_id`, `customer_id`, `employee_id`, `order_date`, `r
 --
 
 CREATE TABLE IF NOT EXISTS `order_details` (
-  `od_id` int(10) unsigned NOT NULL auto_increment,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `order_id` int(11) default '0',
   `product_id` int(11) default '0',
   `unit_price` float(1,0) default '0',
   `quantity` smallint(6) default '1',
   `discount` float(1,0) default '0',
-  PRIMARY KEY  (`od_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2156 ;
 
 --
 -- Dumping data for table `order_details`
 --
 
-INSERT INTO `order_details` (`od_id`, `order_id`, `product_id`, `unit_price`, `quantity`, `discount`) VALUES
+INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `unit_price`, `quantity`, `discount`) VALUES
 (1, 10248, 11, 0, 12, 0),
 (2, 10248, 42, 0, 10, 0),
 (3, 10248, 72, 0, 5, 0),
@@ -2984,7 +2984,7 @@ INSERT INTO `order_details` (`od_id`, `order_id`, `product_id`, `unit_price`, `q
 (1905, 10986, 11, 0, 30, 0),
 (1906, 10986, 20, 0, 15, 0),
 (1907, 10986, 76, 0, 10, 0);
-INSERT INTO `order_details` (`od_id`, `order_id`, `product_id`, `unit_price`, `quantity`, `discount`) VALUES
+INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `unit_price`, `quantity`, `discount`) VALUES
 (1908, 10986, 77, 0, 15, 0),
 (1909, 10987, 7, 0, 60, 0),
 (1910, 10987, 43, 0, 6, 0),
@@ -3241,7 +3241,7 @@ INSERT INTO `order_details` (`od_id`, `order_id`, `product_id`, `unit_price`, `q
 --
 
 CREATE TABLE IF NOT EXISTS `products` (
-  `product_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `product_name` varchar(40) default NULL,
   `supplier_id` int(11) default NULL,
   `category_id` int(11) default NULL,
@@ -3251,14 +3251,14 @@ CREATE TABLE IF NOT EXISTS `products` (
   `units_on_order` smallint(6) default '0',
   `reorder_level` smallint(6) default '0',
   `discontinued` tinyint(1) default '0',
-  PRIMARY KEY  (`product_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=78 ;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `product_name`, `supplier_id`, `category_id`, `quantity_per_unit`, `unit_price`, `units_in_stock`, `units_on_order`, `reorder_level`, `discontinued`) VALUES
+INSERT INTO `products` (`id`, `product_name`, `supplier_id`, `category_id`, `quantity_per_unit`, `unit_price`, `units_in_stock`, `units_on_order`, `reorder_level`, `discontinued`) VALUES
 (1, 'Chai', 1, 1, '10 boxes x 20 bags', 0, 39, 0, 10, 0),
 (2, 'Chang', 1, 1, '24 - 12 oz bottles', 0, 17, 40, 25, 0),
 (3, 'Aniseed Syrup', 1, 2, '12 - 550 ml bottles', 0, 13, 70, 25, 0),
@@ -3344,17 +3344,17 @@ INSERT INTO `products` (`product_id`, `product_name`, `supplier_id`, `category_i
 --
 
 CREATE TABLE IF NOT EXISTS `shippers` (
-  `shipper_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `company_name` varchar(40) default NULL,
   `phone` varchar(24) default NULL,
-  PRIMARY KEY  (`shipper_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `shippers`
 --
 
-INSERT INTO `shippers` (`shipper_id`, `company_name`, `phone`) VALUES
+INSERT INTO `shippers` (`id`, `company_name`, `phone`) VALUES
 (1, 'Speedy Express', '(503) 555-9831'),
 (2, 'United Package', '(503) 555-3199'),
 (3, 'Federal Shipping', '(503) 555-9931');
@@ -3366,7 +3366,7 @@ INSERT INTO `shippers` (`shipper_id`, `company_name`, `phone`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `suppliers` (
-  `supplier_id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL auto_increment,
   `company_name` varchar(40) default NULL,
   `contact_name` varchar(30) default NULL,
   `contact_title` varchar(30) default NULL,
@@ -3378,14 +3378,14 @@ CREATE TABLE IF NOT EXISTS `suppliers` (
   `phone` varchar(24) default NULL,
   `fax` varchar(24) default NULL,
   `home_page` text,
-  PRIMARY KEY  (`supplier_id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `suppliers`
 --
 
-INSERT INTO `suppliers` (`supplier_id`, `company_name`, `contact_name`, `contact_title`, `address`, `city`, `region`, `postal_code`, `country`, `phone`, `fax`, `home_page`) VALUES
+INSERT INTO `suppliers` (`id`, `company_name`, `contact_name`, `contact_title`, `address`, `city`, `region`, `postal_code`, `country`, `phone`, `fax`, `home_page`) VALUES
 (1, 'Exotic Liquids', 'Charlotte Cooper', 'Purchasing Manager', '49 Gilbert St.', 'London', '', 'EC1 4SD', 'United Kingdom', '(171) 555-2222', '', ''),
 (2, 'New Orleans Cajun Delights', 'Shelley Burke', 'Order Administrator', 'P.O. Box 78934', 'New Orleans', 'LA', '70117', 'United States', '(100) 555-4822', '', '#CAJUN.HTM#'),
 (3, 'Grandma Kelly''s Homestead', 'Regina Murphy', 'Sales Representative', '707 Oxford Rd.', 'Ann Arbor', 'MI', '48104', 'United States', '(313) 555-5735', '(313) 555-3349', ''),
