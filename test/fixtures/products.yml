@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  supplier_id: 1
+  category_id: 1
+  quantity_per_unit: MyString
+  unit_price: 1.5
+  units_in_stock: 1
+  units_on_order: 1
+  reorder_level: 1
+  discontinued: false
+
+two:
+  product_name: MyString
+  supplier_id: 1
+  category_id: 1
+  quantity_per_unit: MyString
+  unit_price: 1.5
+  units_in_stock: 1
+  units_on_order: 1
+  reorder_level: 1
+  discontinued: false
