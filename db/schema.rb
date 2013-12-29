@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229194058) do
+ActiveRecord::Schema.define(version: 20131229194211) do
 
   create_table "categories", force: true do |t|
     t.string   "category_name"
@@ -95,6 +95,13 @@ ActiveRecord::Schema.define(version: 20131229194058) do
     t.integer  "units_on_order"
     t.integer  "reorder_level"
     t.boolean  "discontinued"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shippers", force: true do |t|
+    t.string   "company_name"
+    t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
