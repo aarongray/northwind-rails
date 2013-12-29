@@ -3247,9 +3247,9 @@ CREATE TABLE IF NOT EXISTS `products` (
   `category_id` int(11) default NULL,
   `quantity_per_unit` varchar(20) default NULL,
   `unit_price` float(1,0) default '0',
-  `units_in_stock` smallint(6) default '0',
-  `units_on_order` smallint(6) default '0',
-  `reorder_level` smallint(6) default '0',
+  `units_in_stock` int(11) default '0',
+  `units_on_order` int(11) default '0',
+  `reorder_level` int(11) default '0',
   `discontinued` tinyint(1) default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=78 ;
