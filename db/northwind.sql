@@ -202,7 +202,7 @@ INSERT INTO `employees` (`id`, `last_name`, `first_name`, `title`, `title_of_cou
 
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL auto_increment,
-  `customer_id` varchar(5) default NULL,
+  `customer_id` int(11) default NULL,
   `employee_id` int(11) default NULL,
   `order_date` date default NULL,
   `required_date` date default NULL,
