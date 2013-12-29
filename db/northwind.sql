@@ -1067,7 +1067,7 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   `order_id` int(11) default '0',
   `product_id` int(11) default '0',
   `unit_price` float(1,0) default '0',
-  `quantity` smallint(6) default '1',
+  `quantity` int(11) default '1',
   `discount` float(1,0) default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2156 ;
