@@ -24,6 +24,10 @@ Northwind::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
+
+  # Do not mess up the names when you minify the js to protect Angular.
+  config.assets.js_compressor = Uglifier.new(mangle: false)
+
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
