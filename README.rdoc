@@ -1,28 +1,17 @@
-== README
+== Northwind Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ever wanted to play around with ActiveRecord on a nice database? Now you can use
+Northwind to learn about Rails' query syntax. At this point, the project is only
+designed for command line usage, but perhaps one day there will be a GUI for it
+as well.
 
-Things you may want to cover:
+Setup process:
 
-* Ruby version
+* install all the gems using your preferred method
 
-* System dependencies
+* create databases to match config/database.yml, or alter this config file to suit yourself
 
-* Configuration
+* `rake db:migrate`
 
-* Database creation
+* run the sql dump located at db/northwind.sql (it is designed for MySQL)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
