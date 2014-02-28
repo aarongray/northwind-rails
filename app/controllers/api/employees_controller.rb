@@ -6,4 +6,10 @@ class Api::EmployeesController < ApplicationController
     render :json => @employees
   end
 
+  # GET /api/employees/:id
+  def show
+    @employee = Employee.find(params[:id])
+    render :json => @employee
+  end
+
 end

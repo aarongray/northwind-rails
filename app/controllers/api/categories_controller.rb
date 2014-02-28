@@ -6,4 +6,10 @@ class Api::CategoriesController < ApplicationController
     render :json => @categories
   end
 
+  # GET /api/categories/:id
+  def show
+    @category = Category.find(params[:id])
+    render :json => @category
+  end
+
 end

@@ -6,4 +6,10 @@ class Api::OrdersController < ApplicationController
     render :json => @orders
   end
 
+  # GET /api/orders/:id
+  def show
+    @order = Order.find(params[:id])
+    render :json => @order
+  end
+
 end

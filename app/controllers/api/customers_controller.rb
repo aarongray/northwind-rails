@@ -6,4 +6,10 @@ class Api::CustomersController < ApplicationController
     render :json => @customers
   end
 
+  # GET /api/customers/:id
+  def show
+    @customer = Customer.find(params[:id])
+    render :json => @customer
+  end
+
 end

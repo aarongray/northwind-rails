@@ -6,4 +6,10 @@ class Api::ShippersController < ApplicationController
     render :json => @shippers
   end
 
+  # GET /api/shippers/:id
+  def show
+    @shipper = Shipper.find(params[:id])
+    render :json => @shipper
+  end
+
 end
