@@ -5863,6 +5863,12 @@ legend {
 
 /* THEME OVERRIDES */
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #ad1d28;
+.navbar-default {
+  background-image: none;
+}
+
+/* ANGULAR STYLES */
+
+.customers-table {
+  margin-top: 80px;
 }
