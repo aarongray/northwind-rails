@@ -1,8 +1,8 @@
 'use strict';
 
-App.controller('CustomersController', ['$scope',
-  function ($scope) {
-    $scope.hash = {message: "Message from the controller"};
-    $scope.string = "Angular rocks!"
-  }]);
+App.controller('CustomersController', ['$scope', 'Customer',
+  function ($scope, Customer) {
+    $scope.customers = Customer.query();
+  }
+]);
 
