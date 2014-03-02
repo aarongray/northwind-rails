@@ -2,6 +2,4 @@
 'use strict';
 
 /* App Module */
-var northwindApp = angular.module('northwindApp', []);
-
-var northwindControllers = angular.module('northwindApp', []);
+var App = angular.module('northwindApp', []);

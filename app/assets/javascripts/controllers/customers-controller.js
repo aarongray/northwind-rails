@@ -1,7 +1,8 @@
 'use strict';
 
-northwindControllers.controller('CustomersController', ['$scope',
+App.controller('CustomersController', ['$scope',
   function ($scope) {
-    $scope.data = {message: "Message from the controller"};
+    $scope.hash = {message: "Message from the controller"};
+    $scope.string = "Angular rocks!"
   }]);
 

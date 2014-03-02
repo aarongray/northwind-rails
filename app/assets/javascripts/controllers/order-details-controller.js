@@ -1,6 +1,6 @@
 'use strict';
 
-northwindControllers.controller('OrderDetailsController', ['$scope',
+App.controller('OrderDetailsController', ['$scope',
   function ($scope) {
   }]);
 

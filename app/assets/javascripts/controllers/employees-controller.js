@@ -1,6 +1,6 @@
 'use strict';
 
-northwindControllers.controller('EmployeesController', ['$scope',
+App.controller('EmployeesController', ['$scope',
   function ($scope) {
   }]);
 
