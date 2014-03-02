@@ -2,4 +2,4 @@
 'use strict';
 
 /* App Module */
-var App = angular.module('northwindApp', []);
+var App = angular.module('northwindApp', ['ngResource']);
