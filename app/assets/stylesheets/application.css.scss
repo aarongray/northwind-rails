@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+/*
+ * Add in bootstrap manually, to allow the other stylesheets to access the
+ * Bootstrap mixins and variables.
+ * See https://github.com/twbs/bootstrap-sass/issues/79#issuecomment-4428595
+*/
+@import "bootstrap";
+@import "bootstrap/theme";
