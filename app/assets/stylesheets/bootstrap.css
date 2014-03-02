@@ -5860,3 +5860,9 @@ legend {
 .affix {
   position: fixed;
 }
+
+/* THEME OVERRIDES */
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #ad1d28;
+}
