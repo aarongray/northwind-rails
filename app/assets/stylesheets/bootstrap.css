@@ -5869,7 +5869,7 @@ legend {
 
 /* ANGULAR STYLES */
 
-.customers-table, .categories-table, .employees-table, .order-details-table, .orders-table {
+.customers-table, .categories-table, .employees-table, .order-details-table, .orders-table, .products-table {
   margin-top: 80px;
 }
 

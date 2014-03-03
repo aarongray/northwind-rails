@@ -190,3 +190,42 @@
   </table>
 </div>
 
+<hr class="table-spacer"/>
+
+<div ng-controller="ProductsController">
+  <table class="products-table table table-striped table-hover">
+    <caption>
+      Products
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Supplier ID</th>
+        <th scope="col">Category ID</th>
+        <th scope="col">Quantity per Unit</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Units in Stock</th>
+        <th scope="col">Units on Order</th>
+        <th scope="col">Reorder Level</th>
+        <th scope="col">Discontinued</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="product in products | limitTo: 20">
+        <td>{{product.id}}</td>
+        <td>{{product.product_name}}</td>
+        <td>{{product.supplier_id}}</td>
+        <td>{{product.category_id}}</td>
+        <td>{{product.quantity_per_unit}}</td>
+        <td>{{product.unit_price}}</td>
+        <td>{{product.units_in_stock}}</td>
+        <td>{{product.units_on_order}}</td>
+        <td>{{product.reorder_level}}</td>
+        <td>{{product.discontinued}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
