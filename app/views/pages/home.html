@@ -252,3 +252,45 @@
   </table>
 </div>
 
+<hr class="table-spacer"/>
+
+<div ng-controller="SuppliersController">
+  <table class="suppliers-table table table-striped table-hover">
+    <caption>
+      Suppliers
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Contact Name</th>
+        <th scope="col">Contact Title</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">Region</th>
+        <th scope="col">Postal Code</th>
+        <th scope="col">Country</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Fax</th>
+        <th scope="col">Home Page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="supplier in suppliers | limitTo: 20">
+        <td>{{supplier.id}}</td>
+        <td>{{supplier.company_name}}</td>
+        <td>{{supplier.contact_name}}</td>
+        <td>{{supplier.contact_title}}</td>
+        <td>{{supplier.address}}</td>
+        <td>{{supplier.city}}</td>
+        <td>{{supplier.region}}</td>
+        <td>{{supplier.postal_code}}</td>
+        <td>{{supplier.country}}</td>
+        <td>{{supplier.phone}}</td>
+        <td>{{supplier.fax}}</td>
+        <td>{{supplier.home_page}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

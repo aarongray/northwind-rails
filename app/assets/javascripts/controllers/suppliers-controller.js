@@ -1,6 +1,8 @@
 'use strict';
 
-App.controller('SuppliersController', ['$scope',
-  function ($scope) {
-  }]);
+App.controller('SuppliersController', ['$scope', 'Supplier',
+  function ($scope, Supplier) {
+    $scope.suppliers = Supplier.query();
+  }
+]);
 
