@@ -1,3 +1,29 @@
+<div ng-controller="CategoriesController">
+  <table class="categories-table table table-striped table-hover">
+    <caption>
+      Categories
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Category Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Picture</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="category in categories">
+        <td>{{category.id}}</td>
+        <td>{{category.category_name}}</td>
+        <td>{{category.description}}</td>
+        <td>{{category.picture}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="table-spacer"/>
+
 <div ng-controller="CustomersController">
   <table class="customers-table table table-striped table-hover">
     <caption>
@@ -35,4 +61,5 @@
     </tbody>
   </table>
 </div>
+
 

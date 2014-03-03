@@ -5869,6 +5869,13 @@ legend {
 
 /* ANGULAR STYLES */
 
-.customers-table {
+.customers-table, .categories-table {
   margin-top: 80px;
+}
+
+hr.table-spacer {
+  border-top: 10px dotted #000;
+  height: 0px;
+  color: #ad1d28;
+  background-color: #ad1d28;
 }
