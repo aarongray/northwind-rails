@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="category in categories">
+      <tr ng-repeat="category in categories | limitTo: 20">
         <td>{{category.id}}</td>
         <td>{{category.category_name}}</td>
         <td>{{category.description}}</td>
@@ -45,7 +45,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="customer in customers">
+      <tr ng-repeat="customer in customers | limitTo: 20">
         <td>{{customer.id}}</td>
         <td>{{customer.company_name}}</td>
         <td>{{customer.contact_name}}</td>
@@ -91,7 +91,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="employee in employees">
+      <tr ng-repeat="employee in employees | limitTo: 20">
         <td>{{employee.id}}</td>
         <td>{{employee.first_name}}</td>
         <td>{{employee.last_name}}</td>
@@ -132,7 +132,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="orderDetail in orderDetails">
+      <tr ng-repeat="orderDetail in orderDetails | limitTo: 20">
         <td>{{orderDetail.id}}</td>
         <td>{{orderDetail.order_id}}</td>
         <td>{{orderDetail.product_id}}</td>
@@ -170,7 +170,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="order in orders">
+      <tr ng-repeat="order in orders | limitTo: 20">
         <td>{{order.id}}</td>
         <td>{{order.customer_id}}</td>
         <td>{{order.employee_id}}</td>
