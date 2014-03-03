@@ -114,3 +114,33 @@
   </table>
 </div>
 
+<hr class="table-spacer"/>
+
+<div ng-controller="OrderDetailsController">
+  <table class="order-details-table table table-striped table-hover">
+    <caption>
+      Order Details
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Order ID</th>
+        <th scope="col">Product ID</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Discount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="orderDetail in orderDetails">
+        <td>{{orderDetail.id}}</td>
+        <td>{{orderDetail.order_id}}</td>
+        <td>{{orderDetail.product_id}}</td>
+        <td>{{orderDetail.unit_price}}</td>
+        <td>{{orderDetail.quantity}}</td>
+        <td>{{orderDetail.discount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
