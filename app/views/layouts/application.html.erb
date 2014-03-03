@@ -4,6 +4,9 @@
   <title>Northwind Rails</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <%= favicon_link_tag '/favicon.png' %>
+  <%= favicon_link_tag '/favicon.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
