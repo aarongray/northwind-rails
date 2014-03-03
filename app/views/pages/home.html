@@ -144,3 +144,49 @@
   </table>
 </div>
 
+<hr class="table-spacer"/>
+
+<div ng-controller="OrdersController">
+  <table class="orders-table table table-striped table-hover">
+    <caption>
+      Orders
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Customer ID</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Order Date</th>
+        <th scope="col">Required Date</th>
+        <th scope="col">Shipped Date</th>
+        <th scope="col">Ship Via</th>
+        <th scope="col">Freight</th>
+        <th scope="col">Ship Name</th>
+        <th scope="col">Ship Address</th>
+        <th scope="col">Ship City</th>
+        <th scope="col">Ship Region</th>
+        <th scope="col">Ship Postal Code</th>
+        <th scope="col">Ship Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="order in orders">
+        <td>{{order.id}}</td>
+        <td>{{order.customer_id}}</td>
+        <td>{{order.employee_id}}</td>
+        <td>{{order.order_date}}</td>
+        <td>{{order.required_date}}</td>
+        <td>{{order.shipped_date}}</td>
+        <td>{{order.ship_via}}</td>
+        <td>{{order.freight}}</td>
+        <td>{{order.ship_name}}</td>
+        <td>{{order.ship_address}}</td>
+        <td>{{order.ship_city}}</td>
+        <td>{{order.ship_region}}</td>
+        <td>{{order.ship_postal_code}}</td>
+        <td>{{order.ship_country}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
