@@ -228,4 +228,27 @@
   </table>
 </div>
 
+<hr class="table-spacer"/>
+
+<div ng-controller="ShippersController">
+  <table class="shippers-table table table-striped table-hover">
+    <caption>
+      Shippers
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="shipper in shippers | limitTo: 20">
+        <td>{{shipper.id}}</td>
+        <td>{{shipper.company_name}}</td>
+        <td>{{shipper.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
