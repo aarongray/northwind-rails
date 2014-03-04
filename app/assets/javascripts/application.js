@@ -15,6 +15,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require lodash.js
 //= require angular-app.js
 //= require controllers/categories-controller.js
 //= require controllers/customers-controller.js
