@@ -234,7 +234,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="product in products | limitTo: 20">
+      <tr ng-repeat="product in products | startFrom: currentPage*maxItemsPerPage | limitTo: maxItemsPerPage">
         <td>{{product.id}}</td>
         <td>{{product.product_name}}</td>
         <td>{{product.supplier_id}}</td>
@@ -248,6 +248,17 @@
       </tr>
     </tbody>
   </table>
+  <ul class="pagination">
+    <li ng-class="currentPage == 0 ? 'disabled' : ''" ng-click="previousPage()"><a href="">«</a></li>
+    <!--
+                                  make array with this length              set the page
+                        lodash -     |                        - limit to 10     |                       - Set active class if we're on that page
+                                v    v                       v                  v                      v                                     -->
+    <li ng-repeat="paginator in _.range(numberOfPages()).slice(0,9)" ng-click="setPage()" ng-class="paginator == currentPage ? 'active' : ''">
+      <a href="">{{paginator + 1}}</a>
+    </li>
+    <li ng-class="currentPage >= products.length/maxItemsPerPage - 1 ? 'disabled' : ''" ng-click="nextPage()"><a href="">»</a></li>
+  </ul>
 </div>
 
 <hr class="table-spacer"/>
