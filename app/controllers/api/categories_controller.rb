@@ -26,6 +26,14 @@ class Api::CategoriesController < ApplicationController
     head :ok
   end
 
+  # DELETE /api/categories/:id
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+
+    head :ok
+  end
+
   private
 
   def category_params
