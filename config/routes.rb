@@ -1,15 +1,6 @@
 Northwind::Application.routes.draw do
 
-  namespace :api, :defaults => {:format => :json} do
-    resources :categories
-    resources :customers
-    resources :employees
-    resources :orders
-    resources :order_details
-    resources :products
-    resources :shippers
-    resources :suppliers
-  end
+  mount GrapeRoutes => '/api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
